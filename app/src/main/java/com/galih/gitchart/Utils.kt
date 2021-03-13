@@ -19,6 +19,7 @@ fun getJsonDataFromAsset(context: Context, fileName: String): String? {
     return jsonString
 }
 
+// currently not using this function
 fun customGlider(activity: Activity, resource: String?, size: Int, target: ImageView) {
     val resName = resource?.subSequence(1, resource.length)
     Glide.with(activity)
@@ -27,6 +28,7 @@ fun customGlider(activity: Activity, resource: String?, size: Int, target: Image
         .into(target)
 }
 
+// currently not using this function
 fun customGlider(context: Context, resource: String?, size: Int, target: ImageView) {
     val resName = resource?.subSequence(1, resource.length)
     Glide.with(context)

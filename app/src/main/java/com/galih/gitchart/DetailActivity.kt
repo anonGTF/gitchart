@@ -24,8 +24,6 @@ class DetailActivity : AppCompatActivity() {
         binding.tvDetailLocation.text = accountData?.location
         binding.tvDetailWork.text = accountData?.company
 
-        customGlider(this, accountData?.avatar, 150, binding.imgDetail)
-
         Glide.with(this)
             .load(accountData?.avatar)
             .apply(RequestOptions().override(150))

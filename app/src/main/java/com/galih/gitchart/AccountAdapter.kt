@@ -27,7 +27,10 @@ class AccountAdapter (
             tvAccountLocation.text = accounts[position].location
         }
 
-        customGlider(holder.itemView.context, accounts[position].avatar, 150, holder.itemBinding.imgAccount)
+        Glide.with(holder.itemView.context)
+            .load(accounts[position].avatar)
+            .apply(RequestOptions().override(50))
+            .into(holder.itemBinding.imgAccount)
 
         holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(accounts[holder.adapterPosition]) }
     }
