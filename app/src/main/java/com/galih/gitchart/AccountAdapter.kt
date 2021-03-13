@@ -28,7 +28,7 @@ class AccountAdapter (
         }
 
         Glide.with(holder.itemView.context)
-            .load(accounts[position].avatar)
+            .load(accounts[position].avatarId)
             .apply(RequestOptions().override(50))
             .into(holder.itemBinding.imgAccount)
 

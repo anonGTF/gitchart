@@ -7,10 +7,11 @@ import kotlinx.parcelize.Parcelize
 data class Account (
         val username: String,
         val name: String,
-        val avatar: Int,
+        val avatar: String,
         val company: String,
         val location: String,
         val repository: String,
         val follower: String,
-        val following: String
+        val following: String,
+        var avatarId: Int? = null
 ) : Parcelable

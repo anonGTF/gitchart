@@ -18,6 +18,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         list = getData()
+        list.map {
+            it.avatarId = getAvatarId(it)
+        }
         adapter = AccountAdapter(list)
         binding.rvAccountList.setHasFixedSize(true)
         binding.rvAccountList.layoutManager = LinearLayoutManager(this)
@@ -29,6 +32,9 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
+    private fun getAvatarId(data: Account): Int =
+        resources.getIdentifier(data.avatar, null, packageName)
 
     private fun getData(): ArrayList<Account> {
         val jsonFileString = getJsonDataFromAsset(applicationContext, "githubuser.json")

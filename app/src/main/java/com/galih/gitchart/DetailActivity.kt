@@ -25,7 +25,7 @@ class DetailActivity : AppCompatActivity() {
         binding.tvDetailWork.text = accountData?.company
 
         Glide.with(this)
-            .load(accountData?.avatar)
+            .load(accountData?.avatarId)
             .apply(RequestOptions().override(150))
             .into(binding.imgDetail)
 
