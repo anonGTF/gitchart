@@ -9,47 +9,48 @@ import com.google.gson.Gson
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var adapter: AccountAdapter
-    private lateinit var list: ArrayList<Account>
+    private lateinit var adapter: UserAdapter
+    private lateinit var list: ArrayList<User>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.title = "User list"
 
         list = getData()
         list.map {
             it.avatarId = getAvatarId(it)
         }
-        adapter = AccountAdapter(list)
-        binding.rvAccountList.setHasFixedSize(true)
-        binding.rvAccountList.layoutManager = LinearLayoutManager(this)
-        binding.rvAccountList.adapter = adapter
+        adapter = UserAdapter(list)
+        binding.rvUserList.setHasFixedSize(true)
+        binding.rvUserList.layoutManager = LinearLayoutManager(this)
+        binding.rvUserList.adapter = adapter
 
-        adapter.setOnItemClickCallback(object : AccountAdapter.OnItemClickCallback {
-            override fun onItemClicked(data: Account) {
-                showSelectedAccount(data)
+        adapter.setOnItemClickCallback(object : UserAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: User) {
+                showSelectedUser(data)
             }
         })
     }
 
-    private fun getAvatarId(data: Account): Int =
+    private fun getAvatarId(data: User): Int =
         resources.getIdentifier(data.avatar, null, packageName)
 
-    private fun getData(): ArrayList<Account> {
+    private fun getData(): ArrayList<User> {
         val jsonFileString = getJsonDataFromAsset(applicationContext, "githubuser.json")
         val gson = Gson()
-        val accounts: Users = gson.fromJson(jsonFileString, Users::class.java)
-        return accounts.users
+        val users: Users = gson.fromJson(jsonFileString, Users::class.java)
+        return users.users
     }
 
-    private fun showSelectedAccount(data : Account){
+    private fun showSelectedUser(data : User){
         val intent = Intent(this, DetailActivity::class.java)
         intent.putExtra("extra", data)
         startActivity(intent)
     }
 
     inner class Users (
-        val users: ArrayList<Account>
+        val users: ArrayList<User>
     )
 }

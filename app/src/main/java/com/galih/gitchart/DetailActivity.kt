@@ -15,23 +15,23 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val accountData = intent.getParcelableExtra<Account>("extra")
-        binding.tvDetailName.text = accountData?.name
-        binding.tvDetailUsername.text = accountData?.username
-        binding.tvDetailRepository.text = accountData?.repository
-        binding.tvDetailFollower.text = accountData?.follower
-        binding.tvDetailFollowing.text = accountData?.following
-        binding.tvDetailLocation.text = accountData?.location
-        binding.tvDetailWork.text = accountData?.company
+        val userData = intent.getParcelableExtra<User>("extra")
+        binding.tvDetailName.text = userData?.name
+        binding.tvDetailUsername.text = userData?.username
+        binding.tvDetailRepository.text = userData?.repository
+        binding.tvDetailFollower.text = userData?.follower
+        binding.tvDetailFollowing.text = userData?.following
+        binding.tvDetailLocation.text = userData?.location
+        binding.tvDetailWork.text = userData?.company
 
         Glide.with(this)
-            .load(accountData?.avatarId)
+            .load(userData?.avatarId)
             .apply(RequestOptions().override(150))
             .into(binding.imgDetail)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.title = "Detail Account"
+        supportActionBar?.title = "Detail User"
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
