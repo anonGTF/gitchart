@@ -48,4 +48,7 @@
         <item name="android:textSize">18sp</item>
         <item name="android:drawablePadding">11dp</item>
     </style>
+    <style name="splashScreenStyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_brand_logo</item>
+    </style>
 </resources>
