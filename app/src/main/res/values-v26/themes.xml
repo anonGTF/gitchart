@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="HSVCard">
+        <item name="android:layout_marginHorizontal">8dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">5dp</item>
+    </style>
+
+    <style name="HSVInfo">
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginHorizontal">24dp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="bottomInfoCard">
+        <item name="android:layout_marginHorizontal">25dp</item>
+        <item name="android:layout_marginTop">21dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">5dp</item>
+    </style>
+
+    <style name="bottomInfoText">
+        <item name="android:layout_marginVertical">32dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:drawablePadding">11dp</item>
+    </style>
+</resources>

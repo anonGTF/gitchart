@@ -19,9 +19,6 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.title = "User list"
 
         list = getData()
-        list.map {
-            it.avatarId = getAvatarId(it)
-        }
         adapter = UserAdapter(list)
         binding.rvUserList.setHasFixedSize(true)
         binding.rvUserList.layoutManager = LinearLayoutManager(this)
@@ -33,9 +30,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
-
-    private fun getAvatarId(data: User): Int =
-        resources.getIdentifier(data.avatar, null, packageName)
 
     private fun getData(): ArrayList<User> {
         val jsonFileString = getJsonDataFromAsset(applicationContext, "githubuser.json")

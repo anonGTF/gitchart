@@ -27,8 +27,11 @@ class UserAdapter (
             tvUserLocation.text = users[position].location
         }
 
+        val context = holder.itemBinding.root.context
+        val image = context.resources.getIdentifier(users[position].avatar, null, context.packageName)
+
         Glide.with(holder.itemView.context)
-            .load(users[position].avatarId)
+            .load(image)
             .apply(RequestOptions().override(50))
             .into(holder.itemBinding.imgUser)
 

@@ -24,8 +24,10 @@ class DetailActivity : AppCompatActivity() {
         binding.tvDetailLocation.text = userData?.location
         binding.tvDetailWork.text = userData?.company
 
+        val image = resources.getIdentifier(userData?.avatar, null, packageName)
+
         Glide.with(this)
-            .load(userData?.avatarId)
+            .load(image)
             .apply(RequestOptions().override(150))
             .into(binding.imgDetail)
 

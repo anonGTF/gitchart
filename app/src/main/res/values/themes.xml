@@ -13,4 +13,39 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="HSVCard">
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">5dp</item>
+    </style>
+    <style name="HSVData">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="HSVInfo">
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="bottomInfoCard">
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginEnd">25dp</item>
+        <item name="android:layout_marginTop">21dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">5dp</item>
+    </style>
+    <style name="bottomInfoText">
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginBottom">32dp</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:drawablePadding">11dp</item>
+    </style>
 </resources>

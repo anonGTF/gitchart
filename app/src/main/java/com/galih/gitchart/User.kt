@@ -12,6 +12,5 @@ data class User (
         val location: String,
         val repository: String,
         val follower: String,
-        val following: String,
-        var avatarId: Int? = null
+        val following: String
 ) : Parcelable

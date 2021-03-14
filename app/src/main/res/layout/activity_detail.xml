@@ -61,25 +61,20 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="135dp"
-                android:layout_height="85dp"
-                android:layout_marginHorizontal="8dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="5dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HSVCard">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/tvDetailRepository"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:text="28"
-                        android:textColor="?android:attr/textColorPrimary"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
+                        style="@style/HSVData"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
@@ -89,10 +84,9 @@
                         android:id="@+id/tvRepository"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:text="Repository"
-                        android:textColor="?android:attr/textColorPrimary"
-                        android:textSize="18sp"
+                        style="@style/HSVInfo"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
@@ -103,25 +97,20 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="135dp"
-                android:layout_height="85dp"
-                android:layout_marginHorizontal="8dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="5dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HSVCard">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/tvDetailFollower"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:text="10000"
-                        android:textColor="?android:attr/textColorPrimary"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
+                        style="@style/HSVData"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
@@ -131,10 +120,9 @@
                         android:id="@+id/tvFollower"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:text="Followers"
-                        android:textColor="?android:attr/textColorPrimary"
-                        android:textSize="18sp"
+                        style="@style/HSVInfo"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
@@ -145,25 +133,20 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="135dp"
-                android:layout_height="85dp"
-                android:layout_marginHorizontal="8dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="5dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HSVCard">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/tvDetailFollowing"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:text="3"
-                        android:textColor="?android:attr/textColorPrimary"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
+                        style="@style/HSVData"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
@@ -173,10 +156,9 @@
                         android:id="@+id/tvFollowing"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:text="Following"
-                        android:textColor="?android:attr/textColorPrimary"
-                        android:textSize="18sp"
+                        style="@style/HSVInfo"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
@@ -193,29 +175,23 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cvLocation"
         android:layout_width="0dp"
-        android:layout_height="85dp"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="30dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="5dp"
+        android:layout_height="wrap_content"
+        style="@style/bottomInfoCard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hsvDetail">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/tvDetailLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawablePadding="11dp"
+                style="@style/bottomInfoText"
                 android:text="Repository"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textSize="18sp"
-                android:layout_marginStart="24dp"
                 app:drawableStartCompat="@drawable/ic_home"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -227,29 +203,23 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="85dp"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="21dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="5dp"
+        android:layout_height="wrap_content"
+        style="@style/bottomInfoCard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cvLocation">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/tvDetailWork"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawablePadding="11dp"
                 android:text="Repository"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textSize="18sp"
-                android:layout_marginStart="24dp"
+                style="@style/bottomInfoText"
                 app:drawableStartCompat="@drawable/ic_work"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
