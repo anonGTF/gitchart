@@ -2,18 +2,20 @@
     <!-- Base application theme. -->
     <style name="Theme.Gitchart" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/greyPrimary</item>
+        <item name="colorPrimaryVariant">@color/greySplash</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">@color/greyMuda</item>
+        <item name="colorSecondaryVariant">@color/greySplash</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
     <style name="HSVCard">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
         <item name="android:layout_marginStart">8dp</item>
         <item name="android:layout_marginEnd">8dp</item>
         <item name="cardCornerRadius">20dp</item>
@@ -47,6 +49,7 @@
         <item name="android:textColor">?android:attr/textColorPrimary</item>
         <item name="android:textSize">18sp</item>
         <item name="android:drawablePadding">11dp</item>
+        <item name="drawableTint">@android:color/tab_indicator_text</item>
     </style>
     <style name="splashScreenStyle" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_brand_logo</item>
