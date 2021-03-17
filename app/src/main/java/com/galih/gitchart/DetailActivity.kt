@@ -33,7 +33,7 @@ class DetailActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.title = "Detail User"
+        supportActionBar?.title = R.string.detail_user.toString()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

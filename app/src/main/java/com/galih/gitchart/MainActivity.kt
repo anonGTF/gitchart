@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.title = "User list"
+        supportActionBar?.title = R.string.user_list.toString()
 
         list = getData()
         adapter = UserAdapter(list)
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getData(): ArrayList<User> {
-        val jsonFileString = getJsonDataFromAsset(applicationContext, "githubuser.json")
+        val jsonFileString = getJsonDataFromAsset(this, "githubuser.json")
         val gson = Gson()
         val users: Users = gson.fromJson(jsonFileString, Users::class.java)
         return users.users

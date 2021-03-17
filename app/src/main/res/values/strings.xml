@@ -3,4 +3,6 @@
     <string name="repository">Repository</string>
     <string name="followers">Followers</string>
     <string name="following">Following</string>
+    <string name="user_list">User list</string>
+    <string name="detail_user">Detail User</string>
 </resources>
